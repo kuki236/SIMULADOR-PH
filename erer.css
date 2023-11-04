@@ -1,0 +1,81 @@
+body {
+    background-color: #7FB1E6; /* Fondo celeste */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366; /* Encabezado azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #E1F5FE; /* Contenido interior celeste claro */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+section {
+    background-color: #FFFFFF; /* Fondo blanco para secciones */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+h2 {
+    font-size: 24px;
+    color: #003366; /* Título azul oscuro */
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    display: inline-block;
+    background-color: #003366; /* Botones azul oscuro */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+a:hover {
+    background-color: #0055A4; /* Cambio de color al pasar el mouse */
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.imagen-container img {
+    display: inline;
+    margin-right: 20px; /* Añade margen entre las imágenes */
+}
