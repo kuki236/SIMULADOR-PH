@@ -74,8 +74,48 @@ li {
     display: inline;
     margin-right: 20px;
 }
+/* Estilos para preguntas y opciones de respuesta */
+.pregunta {
+    background-color: #F0F0F0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 600px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+}
 
-.imagen-container img {
-    display: inline;
-    margin-right: 20px; /* Añade margen entre las imágenes */
+/* Estilos para el botón de "Terminar" */
+button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0055A4;
+}
+
+/* Estilos para las opciones de respuesta */
+.pregunta input[type="radio"] {
+    margin-left: 10px; /* Añade margen a la izquierda de las opciones */
+}
+
+/* Estilos para "Ácido" y "Base" */
+.pregunta input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #003366; /* Borde */
+    border-radius: 50%; /* Forma de círculo */
+    margin-right: 10px; /* Margen a la derecha de las opciones */
+}
+
+/* Estilos para el estado seleccionado (cuando se marca la opción) */
+.pregunta input[type="radio"]:checked + label::before {
+    background-color: #003366; /* Color de fondo al seleccionar */
+    border: 2px solid #003366; /* Borde al seleccionar */
 }
