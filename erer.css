@@ -1,13 +1,13 @@
 /* Estilos generales */
 body {
-    background-color: #7FB1E6; /* Fondo celeste */
+    background-color: #7FB1E6; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #003366; /* Encabezado azul oscuro */
+    background-color: #003366; 
     color: white;
     text-align: center;
     padding: 10px;
@@ -20,13 +20,13 @@ h1 {
 main {
     margin: 20px;
     padding: 20px;
-    background-color: #E1F5FE; /* Contenido interior celeste claro */
+    background-color: #E1F5FE; 
     border-radius: 10px;
     box-shadow: 5px 5px 10px #888888;
 }
 
 section {
-    background-color: #FFFFFF; /* Fondo blanco para secciones */
+    background-color: #FFFFFF;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -35,7 +35,7 @@ section {
 
 h2 {
     font-size: 24px;
-    color: #003366; /* Título azul oscuro */
+    color: #003366; 
 }
 
 p {
@@ -44,7 +44,7 @@ p {
 
 a {
     display: inline-block;
-    background-color: #003366; /* Botones azul oscuro */
+    background-color: #003366; 
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -54,7 +54,7 @@ a {
 }
 
 a:hover {
-    background-color: #0055A4; /* Cambio de color al pasar el mouse */
+    background-color: #0055A4;
 }
 
 footer {
@@ -76,17 +76,16 @@ li {
     margin-right: 20px;
 }
 
-/* Estilos para preguntas y opciones de respuesta */
 .pregunta {
     background-color: #F0F0F0;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    max-width: 600px; /* Establece un ancho máximo */
-    margin: 0 auto; /* Centra horizontalmente */
+    max-width: 600px;
+    margin: 0 auto; 
 }
 
-/* Estilos para el botón de "Terminar" */
+
 button {
     background-color: #003366;
     color: white;
@@ -100,29 +99,25 @@ button:hover {
     background-color: #0055A4;
 }
 
-/* Estilos para las opciones de respuesta */
 .pregunta input[type="radio"] {
-    margin-left: 10px; /* Añade margen a la izquierda de las opciones */
+    margin-left: 10px; 
 }
-
-/* Estilos para "Ácido" y "Base" */
 .pregunta input[type="radio"] + label::before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
-    border: 2px solid #003366; /* Borde */
-    border-radius: 50%; /* Forma de círculo */
-    margin-right: 10px; /* Margen a la derecha de las opciones */
+    border: 2px solid #003366;
+    border-radius: 50%; 
+    margin-right: 10px; 
 }
 
-/* Estilos para el estado seleccionado (cuando se marca la opción) */
+
 .pregunta input[type="radio"]:checked + label::before {
-    background-color: #003366; /* Color de fondo al seleccionar */
-    border: 2px solid #003366; /* Borde al seleccionar */
+    background-color: #003366; 
+    border: 2px solid #003366; 
 }
 
-/* Estilos para la sección de experimentación */
 #experimentacion {
     text-align: center;
 }
@@ -139,14 +134,14 @@ button:hover {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+    transition: background-color 0.3s; 
 }
 
 .sustancia:hover {
-    background-color: #8ed0ea; /* Cambia el color al pasar el mouse */
+    background-color: #8ed0ea; 
 }
 
-/* Estilos para la ventana emergente */
+
 #opciones-popup {
     display: none;
     position: fixed;
@@ -175,29 +170,24 @@ button:hover {
 }
 
 #opciones-popup button.tornasol {
-    background-color: #f50202; /* Rojo */
+    background-color: #f50202; 
     color: white;
-    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+    transition: background-color 0.3s;
 }
 
 #opciones-popup button.tornasol:hover {
-    background-color: #FF4500; /* Cambia el color al pasar el mouse */
+    background-color: #FF4500; 
 }
 
 #opciones-popup button.tornasol_azul {
-    background-color: #0919c1; /* Rojo */
+    background-color: #0919c1;
     color: white;
-    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+    transition: background-color 0.3s; 
 }
 
 #opciones-popup button.tornasol_azul:hover {
-    background-color: #5424d7; /* Cambia el color al pasar el mouse */
+    background-color: #5424d7;
 }
-
-
-
-
-
 
 .carrusel-container {
     display: flex;
@@ -207,13 +197,13 @@ button:hover {
 .carrusel-container {
     display: flex;
     overflow: hidden;
-    margin-top: 10px; /* Ajusta según sea necesario */
-    margin-bottom: 10px; /* Ajusta según sea necesario */
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
 .carrusel-container img {
     max-width: 10%;
-    max-height: 35vh; /* Ajusta según sea necesario para que las imágenes sean visibles */
+    max-height: 35vh; 
     transition: transform 0.5s ease;
 }
 
@@ -230,12 +220,12 @@ button:hover {
 }
 
 #opciones-popup {
-    max-width: 40%; /* Ajusta según sea necesario */
-    max-height: 40vh; /* Ajusta según sea necesario */
-    /* Resto de los estilos... */
+    max-width: 40%; 
+    max-height: 40vh; 
+
 }
 
-/* Agregar estilos adicionales según sea necesario */
+
 .imagenes-container img {
     max-width: 50%;
     max-height: 50%;

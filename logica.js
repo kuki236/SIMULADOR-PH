@@ -28,7 +28,7 @@ function obtenerRespuesta(nombrePregunta, respuestaCorrecta) {
 function mostrarOpciones(sustancia) {
     const popup = document.getElementById('opciones-popup');
 
-    // Limpia el contenido anterior antes de agregar nuevos elementos
+ 
     while (popup.firstChild) {
         popup.removeChild(popup.firstChild);
     }
@@ -38,19 +38,19 @@ function mostrarOpciones(sustancia) {
 
     const botonRojo = document.createElement('button');
     botonRojo.textContent = 'Tornasol Rojo';
-    botonRojo.className = 'tornasol'; // Agrega la clase 'tornasol' al botón Rojo
+    botonRojo.className = 'tornasol';
     botonRojo.onclick = function () {
         mostrarImagenes(sustancia, 'rojo');
     };
-    popup.appendChild(botonRojo); // Añade el botón al contenedor principal
+    popup.appendChild(botonRojo); 
 
     const botonAzul = document.createElement('button');
     botonAzul.textContent = 'Tornasol Azul';
-    botonAzul.className = 'tornasol_azul'; // Agrega la clase 'tornasol' al botón Azul
+    botonAzul.className = 'tornasol_azul'; 
     botonAzul.onclick = function () {
         mostrarImagenes(sustancia, 'azul');
     };
-    popup.appendChild(botonAzul); // Añade el botón al contenedor principal
+    popup.appendChild(botonAzul); 
 
 
     const botonCerrar = document.createElement('button');
@@ -66,7 +66,7 @@ function mostrarOpciones(sustancia) {
 function mostrarImagenes(sustancia, tipoTornasol) {
     const popup = document.getElementById('opciones-popup');
 
-    // Limpia el contenido anterior antes de agregar nuevas imágenes
+
     while (popup.firstChild) {
         popup.removeChild(popup.firstChild);
     }
@@ -114,10 +114,7 @@ function mostrarImagenes(sustancia, tipoTornasol) {
 
 
 function obtenerImagenes(sustancia, tipoTornasol) {
-    // Lógica para obtener imágenes según el tipo de Tornasol y sustancia
-    // Reemplaza esto con tu propia lógica o estructura de imágenes
 
-    // Por ejemplo, podrías tener un objeto que almacene las imágenes para cada sustancia y tipo de Tornasol
     const imagenesPorSustancia = {
         limon: {
             rojo: ['images/limon_rojo_1.jpg', 'images/limon_rojo_2.jpg'],
@@ -151,20 +148,20 @@ function obtenerImagenes(sustancia, tipoTornasol) {
             rojo: ['images/lluvia_rojo_1.jpg', 'images/lluvia_rojo_2.jpg'],
             azul: ['images/lluvia_azul_1.jpg', 'images/lluvia_azul_2.jpg','images/lluvia_azul_3.jpg'],
         },
-        // Agrega más sustancias según sea necesario
+        
     };
 
     return imagenesPorSustancia[sustancia][tipoTornasol] || [];
 }
 
-// Función para cambiar el volumen al hacer clic
+
 function toggleVolume() {
     const audioPlayer = document.getElementById('audioPlayer');
     if (audioPlayer.volume === 0.5) {
-        // Si el volumen está al 50%, cambiar a 0%
+
         audioPlayer.volume = 0;
     } else {
-        // Si el volumen no está al 50%, cambiar a 50%
+
         audioPlayer.volume = 0.5;
     }
 }
