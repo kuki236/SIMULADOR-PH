@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     background-color: #7FB1E6; /* Fondo celeste */
     font-family: Arial, sans-serif;
@@ -74,6 +75,7 @@ li {
     display: inline;
     margin-right: 20px;
 }
+
 /* Estilos para preguntas y opciones de respuesta */
 .pregunta {
     background-color: #F0F0F0;
@@ -118,4 +120,124 @@ button:hover {
 .pregunta input[type="radio"]:checked + label::before {
     background-color: #003366; /* Color de fondo al seleccionar */
     border: 2px solid #003366; /* Borde al seleccionar */
+}
+
+/* Estilos para la sección de experimentación */
+#experimentacion {
+    text-align: center;
+}
+
+.sustancias-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sustancia {
+    background-color: #bedbef;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+}
+
+.sustancia:hover {
+    background-color: #8ed0ea; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para la ventana emergente */
+#opciones-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#opciones-popup img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#opciones-popup button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#opciones-popup button.tornasol {
+    background-color: #f50202; /* Rojo */
+    color: white;
+    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+}
+
+#opciones-popup button.tornasol:hover {
+    background-color: #FF4500; /* Cambia el color al pasar el mouse */
+}
+
+#opciones-popup button.tornasol_azul {
+    background-color: #0919c1; /* Rojo */
+    color: white;
+    transition: background-color 0.3s; /* Agrega una transición suave para el cambio de color */
+}
+
+#opciones-popup button.tornasol_azul:hover {
+    background-color: #5424d7; /* Cambia el color al pasar el mouse */
+}
+
+
+
+
+
+
+.carrusel-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.carrusel-container {
+    display: flex;
+    overflow: hidden;
+    margin-top: 10px; /* Ajusta según sea necesario */
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+.carrusel-container img {
+    max-width: 10%;
+    max-height: 35vh; /* Ajusta según sea necesario para que las imágenes sean visibles */
+    transition: transform 0.5s ease;
+}
+
+.carrusel-container button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrusel-container button:hover {
+    background-color: #0055A4;
+}
+
+#opciones-popup {
+    max-width: 40%; /* Ajusta según sea necesario */
+    max-height: 40vh; /* Ajusta según sea necesario */
+    /* Resto de los estilos... */
+}
+
+/* Agregar estilos adicionales según sea necesario */
+.imagenes-container img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 0 auto;
 }

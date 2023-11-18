@@ -13,7 +13,7 @@
     <main>
         <section id="bienvenida">
             <audio controls>
-                <source src="images/wanda.mp3" type="audio/mpeg">
+                <source src="images/ash.mp3" type="audio/mpeg">
                 Tu navegador no soporta la reproducción de audio.
             </audio>
             <h2>Bienvenido al Laboratorio Virtual</h2>
@@ -23,13 +23,13 @@
             <img src="images/icon_2.png" alt="Laboratorio Virtual" width="200" height="200">
             <img src="images/icon_3.png" alt="Laboratorio Virtual" width="200" height="200" >
             <p>
-                En este emocionante laboratorio virtual, descubrirás el fascinante mundo del pH y cómo determinar si una sustancia es ácida o básica utilizando el papel tornasol. Pero antes de comenzar, echemos un vistazo a la importancia de este concepto:
+                En este emocionante laboratorio virtual, explorarás el fascinante mundo del pH y aprenderás a determinar si una sustancia es ácida o básica utilizando papel tornasol rojo y azul. Pero antes de comenzar, echemos un vistazo a la importancia de este concepto:
             </p>
             <p>
                 La enseñanza del concepto de pH es fundamental, ya que muchas personas tienen ideas incorrectas al respecto. Para ayudar a aclarar estos conceptos, hemos diseñado esta experiencia STEM interactiva que te guiará a través de un emocionante viaje de aprendizaje.
             </p>
             <p>
-                En este laboratorio, aprenderás a utilizar el papel tornasol para determinar el pH de varias sustancias. ¡Diviértete y descubre el fascinante mundo de los ácidos y las bases!
+                En este laboratorio, aprenderás a utilizar el papel tornasol rojo y azul para determinar el pH de varias sustancias. Si el papel tornasol es rojo, indica que la sustancia es ácida; si es azul, indica que la sustancia es básica. ¡Diviértete y descubre el fascinante mundo de los ácidos y las bases!
             </p>
             <a href="#pretest" class="boton-iniciar">¡Empezar Ahora!</a>
         </section>
@@ -108,39 +108,157 @@
                 <input type="radio" name="pregunta8" id="base8" value="base">
                 <label for="base8">Base</label>
             </div>
-            
-            <div class="pregunta">
-                <p>¿El yogur es un ácido o una base?</p>
-                <img src="images/yogurt.jpg" alt="yogur" width="300" height="300">
-                <input type="radio" name="pregunta9" id="acido9" value="acido">
-                <label for="acido9">Ácido</label>
-                <input type="radio" name="pregunta9" id "base9" value="base">
-                <label for="base9">Base</label>
-            </div>
-        
-            
-            
+                    
             <button onclick="calificarPretest()">Terminar</button>
         </section>
         
         <section id="experimento">
             <h2>Experimentación</h2>
             <p>En el laboratorio, utilizamos dos tipos de papel tornasol, el rojo y el azul, como indicadores para identificar sustancias ácidas y básicas. Estos papeles son una herramienta valiosa en la química y nos ayudan a comprender la naturaleza de las sustancias que estamos investigando.</p>
-            <li>El papel tornasol rojo es un indicador de pH que se vuelve azul en presencia de sustancias básicas.</li>
-            <li>El papel tornasol azul es un indicador de pH que se vuelve rojo en presencia de sustancias ácidas..</li>
+            <ul>
+                <li><strong>Reacción con Tornasol Rojo:</strong></li>
+                    <ul>
+                        <li>Si cambia a azul, indica que la sustancia es una base.</li>
+                        <li>Si se queda en rojo, indica que la sustancia es un ácido.</li>
+                    </ul>
+                <li><strong>Reacción con Tornasol Azul:</strong></li>
+                    <ul>
+                        <li>Si cambia a rojo, indica que la sustancia es un ácido.</li>
+                        <li>Si se queda en azul, indica que la sustancia es una base.</li>
+                    </ul>
+            </ul>
         </section>
-        <section id="cuestionario">
+        <section id="experimentacion">
+            <h2>Experimentación</h2>
+            <div id="opciones-popup">
+                <div id="opciones-imagenes"></div>
+                <button id="cerrar-popup">Cerrar</button>
+            </div>
+            <div class="sustancias-container">
+                <!-- Sustancias en la primera fila -->
+                <div class="sustancia" onclick="mostrarOpciones('limon')">
+                    <p>Jugo de Limón</p>
+                </div>
+                <div class="sustancia" onclick="mostrarOpciones('bicarbonato')">
+                    <p>Bicarbonato de Sodio</p>
+                </div>
+                <div class="sustancia" onclick="mostrarOpciones('vinagre')">
+                    <p>Vinagre</p>
+                </div>
+                <div class="sustancia" onclick="mostrarOpciones('jabon')">
+                    <p>Jabón</p>
+                </div>
+                
+                <!-- Sustancias en la segunda fila -->
+                <div class="sustancia" onclick="mostrarOpciones('naranja')">
+                    <p>Jugo de Naranja</p>
+                </div>
+                <div class="sustancia" onclick="mostrarOpciones('cola')">
+                    <p>Refresco de Cola</p>
+                </div>
+                <div class="sustancia" onclick="mostrarOpciones('detergente')">
+                    <p>Detergente</p>
+                </div>
+                <div class="sustancia" onclick="mostrarOpciones('lluvia')">
+                    <p>Agua de Lluvia</p>
+                </div>
+                <div id="opciones-popup">
+                    <div id="opciones-imagenes"></div>
+                    <button id="cerrar-popup">Cerrar</button>
+                    <button class="flecha-izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
+                    <button class="flecha-derecha" onclick="cambiarImagen(1)">&#10095;</button>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="cuestionario-final">
             <h2>Cuestionario Final</h2>
-            <p>Responde a las preguntas para evaluar tu comprensión.</p>
+            <p>Ahora responde algunas preguntas de retroalimentación </p>
+            <div class="pregunta">
+                <p>¿El jugo de limón es un ácido o una base?</p>
+                <input type="radio" name="pregunta1" id="acido1_final" value="acido">
+                <label for="acido1_final">Ácido</label>
+                <input type="radio" name="pregunta1" id="base1_final" value="base">
+                <label for="base1_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El bicarbonato de sodio es un ácido o una base?</p>
+                <input type="radio" name="pregunta2" id="acido2_final" value="acido">
+                <label for="acido2_final">Ácido</label>
+                <input type="radio" name="pregunta2" id="base2_final" value="base">
+                <label for="base2_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El vinagre es un ácido o una base?</p>
+                <input type="radio" name="pregunta3" id="acido3_final" value="acido">
+                <label for="acido3_final">Ácido</label>
+                <input type="radio" name="pregunta3" id="base3_final" value="base">
+                <label for="base3_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El jabón es un ácido o una base?</p>
+                <input type="radio" name="pregunta4" id="acido4_final" value="acido">
+                <label for="acido4_final">Ácido</label>
+                <input type="radio" name="pregunta4" id="base4_final" value="base">
+                <label for="base4_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El jugo de naranja es un ácido o una base?</p>
+                <input type="radio" name="pregunta5" id="acido5_final" value="acido">
+                <label for "acido5_final">Ácido</label>
+                <input type="radio" name="pregunta5" id="base5_final" value="base">
+                <label for="base5_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El refresco de cola es un ácido o una base?</p>
+                <input type="radio" name="pregunta6" id="acido6_final" value="acido">
+                <label for="acido6_final">Ácido</label>
+                <input type="radio" name="pregunta6" id="base6_final" value="base">
+                <label for="base6_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El detergente es un ácido o una base?</p>
+                <input type="radio" name="pregunta7" id="acido7_final" value="acido">
+                <label for="acido7_final">Ácido</label>
+                <input type="radio" name="pregunta7" id="base7_final" value="base">
+                <label for="base7_final">Base</label>
+            </div>
+        
+            <div class="pregunta">
+                <p>¿El agua de lluvia es un ácido o una base?</p>
+                <input type="radio" name="pregunta8" id="acido8_final" value="acido">
+                <label for="acido8_final">Ácido</label>
+                <input type="radio" name="pregunta8" id="base8_final" value="base">
+                <label for="base8_final">Base</label>
+            </div>
+        
+            <button onclick="calificarCuestionarioFinal()">Terminar</button>
         </section>
 
     </main>
 
+
+ 
+
+    
+    <section id="despedida">
+        <h2>¡Gracias por participar en el Laboratorio Virtual de pH!</h2>
+        <p>Esperamos que hayas disfrutado de la experiencia y hayas aprendido más sobre el fascinante mundo del pH.</p>
+        <p>¡Hasta la próxima!</p>
+    </section>
     <footer>
         <p>Laboratorio Virtual de pH</p>
     </footer>
-    <script src="erer.css"></script>
     <script src="logica.js"></script>
+    </body>
+    </html>
 
 </body>
 </html>
